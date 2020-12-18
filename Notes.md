@@ -1,0 +1,21 @@
+# Portfolio Notes
+
+- sections
+    - intro / home
+        - welcome message
+    - about me
+        - background / how i got into se
+        - fun facts
+        - location
+        - willing to relocate
+    - projects
+        - humdrum
+        - dream world
+        - movie tabs
+        - wepa recipes
+        - video games
+        - calculator
+    - contact me
+        - twitter, linked in, github, codepen
+    - footer
+        - email
