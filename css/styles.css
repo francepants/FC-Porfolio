@@ -2,16 +2,18 @@
     box-sizing: border-box;
 }
 
+/* customization */
+
 :root {
-    --ff-primary: 'Montserrat', sans-serif;;
-    --ff-secondary: 'Source Sans Pro', sans-serif;
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Montserrat', sans-serif;
 
     --fw-reg: 300;
     --fw-bold: 900;
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #999b84;
+    --clr-accent: #ffd369;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -28,3 +30,28 @@
         --fs-body: 1.125rem;
     }
 }
+
+/* general styles */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* typography */
+
+
+
+
+
+
+
