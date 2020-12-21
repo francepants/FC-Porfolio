@@ -1,3 +1,30 @@
-body {
-    background-color: lavender;
+*. *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Montserrat', sans-serif;;
+    --ff-secondary: 'Source Sans Pro', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #999b84;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+/* with larger screen size, make font size bigger */
+@media (min-width: 800px) {
+    :root {
+        --fs-h1:4.5;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
 }
