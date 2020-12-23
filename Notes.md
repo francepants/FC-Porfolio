@@ -9,6 +9,8 @@
         - location
         - willing to relocate
     - projects
+        - images or logos
+            - maybe change the colors
         - humdrum
         - dream world
         - movie tabs
@@ -19,3 +21,11 @@
         - twitter, linked in, github, codepen
     - footer
         - email
+
+----------
+
+## colors
+- #ffd369 - yellow
+- #222831 - super dark grey
+- #393e46 - dark grey
+- #FFFFFF - white
