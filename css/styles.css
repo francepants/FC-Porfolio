@@ -82,7 +82,6 @@ h3 {
     font-size: var(--fs-h3);
 }
 
-
 .section__title {
     margin-bottom: .25em;
 }
@@ -110,8 +109,25 @@ h3 {
 
 
 /* header */
-nav {
-    display: none;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav {
+    position: fixed;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 
