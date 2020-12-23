@@ -22,7 +22,7 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
-    --bs: 0.25em 0.25em 0.75em grey;
+    --bs: 0.25em 0.25em 0.75em white;
 }
 
 /* with larger screen size, make font size bigger */
@@ -34,6 +34,7 @@
         --fs-body: 1.125rem;
     }
 }
+
 
 /* general styles */
 
@@ -104,7 +105,9 @@ h3 {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
+    padding: .25em 1em;
 }
+
 
 /* header */
 nav {
@@ -117,15 +120,14 @@ nav {
     position: relative;
 }
 
-.img-franceline-sitting, .intro__img {
-    height: auto;
+.intro__img {
+    /* height: auto; */
     width: min-content;
     /* border: 1px solid; */
     /* padding: 10px; */
     box-shadow: 0px 8px 30px grey;
    
 }
-
 
 @media (min-width: 600px) {
     .intro {
@@ -158,30 +160,68 @@ nav {
     }
 }
 
+
 /* about me section */
 
 .about-me {
     background-color: var(--clr-dark);
     color: var(--clr-light);
-    
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.section__title--about {
-    color: var(--clr-accent);
-    position: relative;
-}
+
 
 .section__title--about::after {
     /* psuedo element | make the line underneath  */
-    content: '';
+    /* content: '';
     display: block;
     width: 3em;
     height: 1px;
     margin: 0.5em auto 1em;
     background: var(--clr-accent);
-    opacity: 0.5;
+    opacity: 0.5; */
 }
 
-@media (min-width: 800px) {
+.about-me__img {
+    box-shadow: var(--bs);
+}
 
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        color: var(--clr-dark);
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -2em;
+        width: 100%;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+/* projects */
+.my-projects {
+    
 }
