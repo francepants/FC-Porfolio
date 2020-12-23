@@ -223,5 +223,41 @@ nav {
 
 /* projects */
 .my-projects {
-    
+    text-align: center;
 }
+
+.section__subtitle--projects {
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent);
+    margin-bottom: 2em;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-gap: 1em;
+}
+
+.portfolio__item {
+    background: var(--clr-light);
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.2);
+    opacity: .85;
+}
+
+
+
+
+
+
