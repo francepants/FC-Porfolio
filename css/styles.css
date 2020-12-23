@@ -13,14 +13,16 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #fff;
-    --clr-dark: #303030;
+    --clr-light: #FFFFFF;
+    --clr-dark: #222831;
     --clr-accent: #ffd369;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em grey;
 }
 
 /* with larger screen size, make font size bigger */
@@ -49,12 +51,21 @@ img {
     max-width: 100%;
 }
 
+section {
+    padding: 5em 2em;
+}
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
 
 
 /* typography */
 
 h1, h2, h3 {
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
 }
 
@@ -92,21 +103,85 @@ h3 {
 .section__subtitle--intro, .section__subtitle--about {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
+    margin-bottom: 1em;
 }
+
+/* header */
+nav {
+    display: none;
+}
+
 
 /* intro section */
 .intro {
     position: relative;
 }
 
-.img-franceline-sitting {
-    height: 30%;
-    width: 30%;
+.img-franceline-sitting, .intro__img {
+    height: auto;
+    width: min-content;
     /* border: 1px solid; */
     /* padding: 10px; */
-    box-shadow: 0px 20px 50px grey;
+    box-shadow: 0px 8px 30px grey;
+   
 }
 
 
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content; 
+        margin: 0 auto; /*keeps it centered*/
+        grid-column-gap: 1em; /*space img intro from text*/
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: 
+            min-content max-content;
+    }
 
+    .intro__img {
+        grid-area: img;
+        min-width: 250px; /*so img doesn't disappear*/
+        position: relative;
+        z-index: 2;
+    }
 
+    .section__subtitle--intro {
+        align-self: flex-start;
+        grid-column: -1 / 1; /*will be the whole length of my name*/
+        grid-row: 2;
+        text-align: end;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em); /*lines it up perf*/
+    }
+}
+
+/* about me section */
+
+.about-me {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    
+}
+
+.section__title--about {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--about::after {
+    /* psuedo element | make the line underneath  */
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-accent);
+    opacity: 0.5;
+}
+
+@media (min-width: 800px) {
+
+}
