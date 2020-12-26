@@ -47,6 +47,10 @@ body {
     line-height: 1.6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -150,7 +154,7 @@ header {
     color: inherit;
     text-decoration: none;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h2);
 }
 
 .nav__link:hover {
@@ -168,6 +172,30 @@ header {
     z-index: 1000;
 }
 
+.nav-open .nav {
+    /* nav to slide open and closed */
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    /* gets the 'x' when the nav hamburger opens */
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    /* gets the 'x' when the nav hamburger opens */
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    /* gets the 'x' when the nav hamburger opens */
+    opacity: 0;
+}
+
 .hamburger {
     display: block;
     position: relative;
@@ -176,7 +204,7 @@ header {
 .hamburger,
 .hamburger::before, 
 .hamburger::after {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
@@ -257,7 +285,7 @@ header {
 
 
 .section__title--about::after {
-    /* psuedo element | make the line underneath  */
+    /* psuedo element | makes the line underneath  */
     /* content: '';
     display: block;
     width: 3em;
