@@ -117,10 +117,11 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    background: var(--clr-dark);
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 50px;
 }
 
 .nav {
